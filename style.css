@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #22306d;
+  --highligth-color: #d4f371;
+  --letter-color: #ffff;
+  --assistant: #333;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--letter-color);
+  background-image: url("./Landingpage.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+h2 {
+  padding: 2rem;
+  color: var(--highligth-color);
+}
+
+#container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 5rem;
+  flex-wrap: wrap; /* Adiciona quebra de linha para dispositivos móveis */
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Adapta a largura para dispositivos móveis */
+  max-width: 45%; /* Limita a largura para telas maiores */
+  background-color: var(--background-color);
+  border-radius: 20px;
+  overflow: auto;
+  height: 50vh;
+  padding: 1rem;
+}
+
+/* Customização da barra de rolagem */
+.block::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+.block::-webkit-scrollbar-track {
+  background: var(--highligth-color);
+  border-radius: 10px;
+}
+
+.block::-webkit-scrollbar-thumb {
+  background-color: var(--highligth-color);
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+.block::-webkit-scrollbar-thumb:hover {
+  background-color: var(--highligth-color);
+}
+
+/* Estilo para Firefox */
+.block {
+  scrollbar-color: var(--highligth-color) var(--background-color);
+  scrollbar-width: thin;
+  margin-right: 1rem;
+}
+
+.group {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.group h3 {
+  color: var(--highligth-color);
+}
+
+.img {
+  width: 15%;
+}
+
+.dataArtist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dataArtist p {
+  color: var(--letter-color);
+}
+
+.dataArtist p:nth-child(1) {
+  color: var(--highligth-color);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .block {
+    width: 90%;
+    max-width: 90%;
+    height: 50vh;
+
+    h2 {
+      padding: 1rem;
+    }
+  }
+}
