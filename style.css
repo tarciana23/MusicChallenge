@@ -14,7 +14,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--letter-color);
-  background-image: url("./Landingpage.png");
+  background-image: url("./public/Landingpage.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
