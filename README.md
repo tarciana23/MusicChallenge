@@ -31,6 +31,7 @@ Se precisar configurar variáveis de ambiente, crie um arquivo .env na raiz do p
 
 Exemplo:
 VITE_MY_CLIENT_ID=seu_client_id_aqui
+
 VITE_MY_CLIENT_SECRET=seu_client_secret_aqui
 
 
