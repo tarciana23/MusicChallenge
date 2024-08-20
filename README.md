@@ -8,15 +8,11 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
 ## Instalação
 
-1. Clone este repositório para sua máquina local:
-
-   git clone <https://github.com/tarciana23/MusicChallenge>
+1. Clone este repositório para sua máquina local: git clone <https://github.com/tarciana23/MusicChallenge>
    
-2.Navegue até o diretório do projeto:
-   cd <MusicChallenge>
+2.Navegue até o diretório do projeto: cd <MusicChallenge>
 
-3.Instale as dependências do projeto usando npm:
-   npm install
+3.Instale as dependências do projeto usando npm: npm install
 
 ## Instalação
 Após instalar as dependências, inicie o servidor de desenvolvimento:
@@ -31,7 +27,9 @@ index.html: Arquivo principal HTML.
 vite.config.js: Configuração do Vite.
 
 ## Configuração do Ambiente
-Se precisar configurar variáveis de ambiente, crie um arquivo .env na raiz do projeto e adicione as variáveis necessárias. Exemplo:
+Se precisar configurar variáveis de ambiente, crie um arquivo .env na raiz do projeto e adicione as variáveis necessárias.
+
+Exemplo:
 VITE_MY_CLIENT_ID=seu_client_id_aqui
 VITE_MY_CLIENT_SECRET=seu_client_secret_aqui
 
