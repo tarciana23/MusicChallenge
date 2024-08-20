@@ -139,7 +139,7 @@ function displayArtistsByFollowers(artists) {
 
     const img = document.createElement("img");
     img.className = "img";
-    img.src = `./public/${artist.name}.jpg`;
+    img.src = `/${artist.name}.jpg`;
 
     const dataArtist = document.createElement("div");
     dataArtist.className = "dataArtist";
