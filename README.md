@@ -8,16 +8,16 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
 ## Instalação
 
-1. Clone este repositório para sua máquina local:
+   1. Clone este repositório para sua máquina local:
 
    ```bash
    git clone <https://github.com/tarciana23/MusicChallenge>
    
-2.Navegue até o diretório do projeto:
-cd <MusicChallenge>
+   2.Navegue até o diretório do projeto:
+      cd <MusicChallenge>
 
-3.Instale as dependências do projeto usando npm:
-npm install
+   3.Instale as dependências do projeto usando npm:
+      npm install
 
 ## Execução
 Após instalar as dependências, inicie o servidor de desenvolvimento:
