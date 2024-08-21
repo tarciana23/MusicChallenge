@@ -1,7 +1,14 @@
 // vite.config.js
 import { defineConfig } from 'vite';
-import envCompatible from 'vite-plugin-env-compatible';
 
 export default defineConfig({
-  plugins: [envCompatible()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://psel-solution-automation-cf-ubqz773kaq-uc.a.run.app',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 });

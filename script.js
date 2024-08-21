@@ -177,7 +177,7 @@ collectArtistData()
     displayArtistsByFollowers(popArtists);
     displayCommonGenres(genres);
 
-    // Montando objeto para fazer a requisição POST
+    // Montando objeto para fazer a requisição POST da função sendPostRequest
     payload = {
       github_url: "https://github.com/tarciana23/MusicChallenge",
       name: "Tarciana Souza Oliveira",
@@ -188,7 +188,8 @@ collectArtistData()
       genre_ranking: genres.map(([genre]) => genre)
     };
 
-    console.log("Payload:", payload);
+    //Depois do payload montado chamar a função que realiza a etapa 7
+    sendPostRequest();
   })
   .catch((error) => {
     console.error("Erro ao processar dados dos artistas:", error);
@@ -196,26 +197,24 @@ collectArtistData()
 
 
 
-  //Etapa 7 
-
+//Etapa 7 
 async function sendPostRequest() {
- try{
-  const response = await fetch("https://psel-solution-automation-cf-ubqz773kaq-uc.a.run.app?access_token=bC2lWA5c7mt1rSPR", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
-  
-    if(!response.ok){
-      throw new Error(`Erro ao enviar os dados : ${response.statusText}`);
+  console.log("Payload enviado:", JSON.stringify(payload));
+  try {
+    const response = await fetch("/api?access_token=bC2lWA5c7mt1rSPR", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) {
+      throw new Error(`Erro ao enviar os dados: ${response.statusText}`);
     }
-    console.log(`Tudo certo ${response.statusText}`);
-
- }catch(error){
-  console.error("Erro sendPost Request: ",error);
- }
+    console.log(`Tudo certo: ${response.statusText}`);
+  } catch (error) {
+    console.error("Erro sendPost Request: ", error);
+  }
 }
 
-sendPostRequest();
+
