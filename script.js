@@ -199,7 +199,6 @@ collectArtistData()
 
 //Etapa 7 
 async function sendPostRequest() {
-  console.log("Payload enviado:", JSON.stringify(payload));
   try {
     const response = await fetch("/api?access_token=bC2lWA5c7mt1rSPR", {
       method: "POST",
@@ -211,7 +210,7 @@ async function sendPostRequest() {
     if (!response.ok) {
       throw new Error(`Erro ao enviar os dados: ${response.statusText}`);
     }
-    console.log(`Tudo certo: ${response.statusText}`);
+    
   } catch (error) {
     console.error("Erro sendPost Request: ", error);
   }
